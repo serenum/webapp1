@@ -5,6 +5,7 @@
     <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
         <content>
         <Button id="helloDglBtn"
+                icon="sap-icon://world"
                 text="{i18n>openDlgBtnText}" 
                 press=".onOpenDialog" 
                 class="sapUiSmallMarginEnd"/>
