@@ -10,7 +10,16 @@
             "version": "1.0.0"
         },
         "title": "{{appTitle}}",
-        "description": "{{appDescription}}"
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "invoiceRemote": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
     },
     "sap.ui": {
         "technology": "UI5",
@@ -66,8 +75,7 @@
                 "uri": "<uriRelativeToManifest>"
             },
             "invoice":{
-                "type": "sap.ui.model.json.JSONModel",
-                "uri": "invoices.json"
+                "dataSource": "invoiceRemote"
             }
         },
         "rootView": {
